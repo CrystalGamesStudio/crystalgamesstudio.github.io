@@ -1,0 +1,137 @@
+{
+  "stickyBar": {
+    "icon": "/path/to/icon.svg",
+    "text": "Check out our latest game!",
+    "link": "/latest-game"
+  },
+  "header": {
+    "logo": "/path/to/logo.svg",
+    "navItems": [
+      { "text": "Home", "link": "/" },
+      { "text": "Games", "link": "/games" },
+      { "text": "Store", "link": "/store" },
+      { "text": "About", "link": "/about" }
+    ]
+  },
+  "hero": {
+    "headline": "Experience the Magic of Crystal Realms",
+    "subheadline": "Embark on an epic journey through mystical lands and ancient prophecies",
+    "ctaText": "Play Now",
+    "ctaLink": "/play-crystal-realms"
+  },
+  "features": [
+    {
+      "icon": "/path/to/feature1-icon.svg",
+      "title": "Immersive Gameplay",
+      "description": "Lose yourself in stunning visuals and captivating storylines"
+    },
+    {
+      "icon": "/path/to/feature2-icon.svg",
+      "title": "Multiplayer Adventures",
+      "description": "Team up with friends or challenge rivals in epic battles"
+    },
+    {
+      "icon": "/path/to/feature3-icon.svg",
+      "title": "Regular Updates",
+      "description": "Enjoy fresh content and exciting events every month"
+    }
+  ],
+  "productsShowcase": [
+    {
+      "image": "/path/to/product1-image.jpg",
+      "title": "Crystal Shard Bundle",
+      "buttonText": "Add to Cart",
+      "buttonLink": "/cart/add/crystal-shard-bundle"
+    },
+    {
+      "image": "/path/to/product2-image.jpg",
+      "title": "Legendary Armor Set",
+      "buttonText": "Add to Cart",
+      "buttonLink": "/cart/add/legendary-armor-set"
+    },
+    {
+      "image": "/path/to/product3-image.jpg",
+      "title": "Mystic Mount Pack",
+      "buttonText": "Add to Cart",
+      "buttonLink": "/cart/add/mystic-mount-pack"
+    },
+    {
+      "image": "/path/to/product4-image.jpg",
+      "title": "Enchanted Weapon Collection",
+      "buttonText": "Add to Cart",
+      "buttonLink": "/cart/add/enchanted-weapon-collection"
+    }
+  ],
+  "socialProof": [
+    {
+      "logo": "/path/to/review1-logo.svg",
+      "quote": "Crystal Realms is a game-changer in the fantasy RPG genre!",
+      "rating": 5
+    },
+    {
+      "logo": "/path/to/review2-logo.svg",
+      "quote": "Absolutely stunning visuals and engaging gameplay.",
+      "rating": 4.5
+    },
+    {
+      "logo": "/path/to/review3-logo.svg",
+      "quote": "The most immersive multiplayer experience I've ever had.",
+      "rating": 5
+    }
+  ],
+  "faq": [
+    {
+      "question": "What platforms is Crystal Realms available on?",
+      "answer": "Crystal Realms is available on PC, PlayStation 5, and Xbox Series X/S."
+    },
+    {
+      "question": "Is there a subscription fee to play?",
+      "answer": "No, Crystal Realms is free to play. However, there are optional in-game purchases for cosmetic items and convenience features."
+    },
+    {
+      "question": "How often do you release new content?",
+      "answer": "We release major content updates every three months, with smaller events and balance patches on a monthly basis."
+    }
+  ],
+  "footer": {
+    "columns": [
+      {
+        "title": "Company",
+        "links": [
+          { "text": "About Us", "url": "/about" },
+          { "text": "Careers", "url": "/careers" },
+          { "text": "Contact", "url": "/contact" }
+        ]
+      },
+      {
+        "title": "Games",
+        "links": [
+          { "text": "Crystal Realms", "url": "/games/crystal-realms" },
+          { "text": "Upcoming Titles", "url": "/games/upcoming" }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          { "text": "FAQ", "url": "/support/faq" },
+          { "text": "Forums", "url": "/support/forums" },
+          { "text": "Account Support", "url": "/support/account" }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          { "text": "Privacy Policy", "url": "/legal/privacy" },
+          { "text": "Terms of Service", "url": "/legal/terms" }
+        ]
+      }
+    ],
+    "socialMedia": [
+      { "icon": "facebook", "url": "https://facebook.com/crystalgamesstudio" },
+      { "icon": "twitter", "url": "https://twitter.com/crystalgames" },
+      { "icon": "instagram", "url": "https://instagram.com/crystalgamesstudio" },
+      { "icon": "youtube", "url": "https://youtube.com/crystalgamesstudio" }
+    ],
+    "copyright": "© 2023 CrystalGames Studio. All rights reserved."
+  }
+}
