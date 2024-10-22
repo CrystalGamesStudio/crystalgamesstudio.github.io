@@ -7,7 +7,8 @@ export function useContentData() {
   useEffect(() => {
     async function fetchContentData() {
       try {
-        const response = await fetch('/data/content.json')
+        // Update this line to use the correct path
+        const response = await fetch('/content.json')
         if (!response.ok) {
           throw new Error('Failed to fetch content data')
         }
