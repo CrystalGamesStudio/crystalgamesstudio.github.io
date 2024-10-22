@@ -1,7 +1,7 @@
 {
   "stickyBar": {
-    "icon": "CircleAlert",
-    "text": "Check out our latest game! - School's Out",
+    "icon": "Backpack",
+    "text": "Play our debut game - School's Out! Available now!",
     "link": "/schools-out"
   },
   "header": {
@@ -13,8 +13,8 @@
         "link": "/"
       },
       {
-        "text": "Games",
-        "link": "/games"
+        "text": "School's Out!",
+        "link": "/schools-out"
       },
       {
         "text": "Store",
@@ -27,110 +27,110 @@
     ]
   },
   "hero": {
-    "headline": "Experience the Magic of Crystal Realms",
-    "subheadline": "Embark on an epic journey through mystical lands and ancient prophecies",
+    "headline": "Survive the School Day in School's Out!",
+    "subheadline": "Jump, dodge, and use Morse code in this exciting 2D arcade adventure",
     "ctaText": "Play Now",
-    "ctaLink": "/play-crystal-realms"
+    "ctaLink": "/schools-out"
   },
   "features": {
-    "headline": "A better way to game",
-    "subheadline": "Experience the cutting-edge features that set our games apart.",
+    "headline": "A New Take on Arcade Gaming",
+    "subheadline": "Experience the unique features that make School's Out! stand out.",
     "items": [
       {
-        "icon": "Amphora",
-        "title": "Immersive Gameplay",
-        "description": "Lose yourself in stunning visuals and captivating storylines"
+        "icon": "User",
+        "title": "Multiple Characters",
+        "description": "Choose from student, nerd, athlete, artist, or rebel, each with unique attributes"
       },
       {
-        "icon": "Headphones",
-        "title": "Multiplayer Adventures",
-        "description": "Team up with friends or challenge rivals in epic battles"
+        "icon": "Zap",
+        "title": "Energy Management",
+        "description": "Balance your energy levels as you navigate through obstacles"
       },
       {
-        "icon": "Wand",
-        "title": "Regular Updates",
-        "description": "Enjoy fresh content and exciting events every month"
+        "icon": "KeyRound",
+        "title": "Morse Code Combos",
+        "description": "Master Morse code inputs for temporary bonuses and high scores"
       }
     ]
   },
   "productsShowcase": {
-    "headline": "Our best sellers",
+    "headline": "Enhance Your School's Out! Experience",
     "items": [
       {
-        "icon": "Activity",
-        "title": "Crystal Shard Bundle",
+        "icon": "Shirt",
+        "title": "Character Skin Pack",
         "buttonText": "Add to Cart",
-        "buttonLink": "/cart/add/crystal-shard-bundle"
+        "buttonLink": "/cart/add/schools-out-skin-pack"
       },
       {
-        "icon": "Gift",
-        "title": "Legendary Armor Set",
+        "icon": "Rocket",
+        "title": "Booster Bundle",
         "buttonText": "Add to Cart",
-        "buttonLink": "/cart/add/legendary-armor-set"
+        "buttonLink": "/cart/add/schools-out-booster-bundle"
       },
       {
-        "icon": "ShieldCheck",
-        "title": "Mystic Mount Pack",
+        "icon": "Music",
+        "title": "Soundtrack Album",
         "buttonText": "Add to Cart",
-        "buttonLink": "/cart/add/mystic-mount-pack"
+        "buttonLink": "/cart/add/schools-out-soundtrack"
       },
       {
-        "icon": "VenetianMask",
-        "title": "Enchanted Weapon Collection",
+        "icon": "Trophy",
+        "title": "Pro Player Pack",
         "buttonText": "Add to Cart",
-        "buttonLink": "/cart/add/enchanted-weapon-collection"
+        "buttonLink": "/cart/add/schools-out-pro-pack"
       }
     ]
   },
   "socialProof": {
-    "headline": "What our customers say",
+    "headline": "What players are saying about School's Out!",
     "items": [
       {
-        "icon": "Sticker",
-        "quote": "Crystal Realms is a game-changer in the fantasy RPG genre!",
-        "rating": 3
+        "icon": "ThumbsUp",
+        "quote": "School's Out! is addictively fun and challenging!",
+        "rating": 5
       },
       {
-        "icon": "MessageSquareDot",
-        "quote": "Absolutely stunning visuals and engaging gameplay.",
+        "icon": "Star",
+        "quote": "The Morse code system adds a unique twist to the gameplay.",
         "rating": 4
       },
       {
-        "icon": "MessageCirclePlus",
-        "quote": "The most immersive multiplayer experience I've ever had.",
+        "icon": "Heart",
+        "quote": "I love the different character options and their unique abilities.",
         "rating": 5
       }
     ],
-    "ctaText": "Play Now",
-    "ctaLink": "/play-crystal-realms",
-    "ctaIcon": "Percent"
+    "ctaText": "Join the Fun",
+    "ctaLink": "/schools-out",
+    "ctaIcon": "PlayCircle"
   },
   "faq": {
     "headline": "Frequently Asked Questions",
     "items": [
       {
-        "question": "What platforms is Crystal Realms available on?",
-        "answer": "Crystal Realms is available on PC, PlayStation 5, and Xbox Series X/S."
+        "question": "What platforms is School's Out! available on?",
+        "answer": "School's Out! is a web-based game playable on both desktop and mobile devices through your browser."
       },
       {
-        "question": "Is there a subscription fee to play?",
-        "answer": "No, Crystal Realms is free to play. However, there are optional in-game purchases for cosmetic items and convenience features."
+        "question": "Is there a cost to play School's Out!?",
+        "answer": "The base game is free to play. We offer optional in-game purchases for cosmetic items and boosters."
       },
       {
-        "question": "How often do you release new content?",
-        "answer": "We release major content updates every three months, with smaller events and balance patches on a monthly basis."
+        "question": "How do I learn Morse code for the game?",
+        "answer": "Don't worry! The game includes a tutorial on Morse code, and you'll pick it up as you play."
       }
     ]
   },
   "goodBuy": {
     "rating": 5,
-    "headline": "Ready to embark on your Crystal Realms adventure?",
-    "subheadline": "Join millions of players in the most immersive fantasy world ever created",
-    "ctaText": "Start Your Journey",
-    "ctaLink": "/play-crystal-realms",
-    "ctaIcon": "Rocket",
+    "headline": "Ready to ace your virtual school day?",
+    "subheadline": "Join thousands of players in the most exciting school-themed arcade game!",
+    "ctaText": "Start Playing Now",
+    "ctaLink": "/schools-out",
+    "ctaIcon": "GraduationCap",
     "quote": {
-      "text": "Crystal Realms is a game-changer in the fantasy RPG genre!",
+      "text": "School's Out! is the perfect blend of challenge and fun!",
       "icon": "Quote"
     }
   },
@@ -157,8 +157,8 @@
         "title": "Games",
         "links": [
           {
-            "text": "Crystal Realms",
-            "url": "/games/crystal-realms"
+            "text": "School's Out!",
+            "url": "/games/schools-out"
           },
           {
             "text": "Upcoming Titles",
@@ -178,8 +178,8 @@
             "url": "/support/forums"
           },
           {
-            "text": "Account Support",
-            "url": "/support/account"
+            "text": "Game Guide",
+            "url": "/support/schools-out-guide"
           }
         ]
       },
