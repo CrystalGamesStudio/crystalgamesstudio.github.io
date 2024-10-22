@@ -33,15 +33,24 @@ export function Header() {
             </button>
           </div>
           <nav className="hidden md:flex space-x-10">
-            {header.navItems.map((item, index) => (
-              <a
-                key={index}
-                href={item.link}
-                className="text-base font-medium text-gray-500 hover:text-gray-900"
-              >
-                {item.text}
-              </a>
-            ))}
+            {header.navItems.map((item, index) => 
+              item.link ? (
+                <a
+                  key={index}
+                  href={item.link}
+                  className="text-base font-medium text-gray-500 hover:text-gray-900"
+                >
+                  {item.text}
+                </a>
+              ) : (
+                <span
+                  key={index}
+                  className="text-base font-medium text-gray-400 cursor-not-allowed"
+                >
+                  {item.text}
+                </span>
+              )
+            )}
           </nav>
         </div>
       </div>
@@ -87,4 +96,3 @@ export function Header() {
     </header>
   )
 }
-
