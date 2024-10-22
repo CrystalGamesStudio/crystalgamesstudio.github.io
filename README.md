@@ -38,13 +38,13 @@ Below described elements should appear on the page, one after another in the giv
 
     With 4 items, each item has an image, a title and add to cart button.
 
-    Image paths, titles and button text and links should be configurable in the `content.json` file.
+    Icons, titles and button text and links should be configurable in the `content.json` file.
 
 6. Social Proof section
 
     With 3 items, each item has a logo, a quote and a rating.
 
-    Logo paths, quotes and ratings should be configurable in the `content.json` file.
+    Icons, quotes and ratings should be configurable in the `content.json` file.
 
 7. FAQ section
 
@@ -57,3 +57,35 @@ Below described elements should appear on the page, one after another in the giv
     Multiple columns with links (site map, social media links, policy links, etc.) and copyright.
 
     Links and copyright should be configurable in the `content.json` file.
+
+## File Structure
+
+```
+src/
+├── components/
+│   ├── layout/
+│   │   ├── StickyBar.tsx
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   ├── home/
+│   │   ├── HeroSection.tsx
+│   │   ├── FeaturesSection.tsx
+│   │   ├── ProductsShowcase.tsx
+│   │   ├── SocialProofSection.tsx
+│   │   └── FAQSection.tsx
+│   └── common/
+│       ├── Button.tsx
+│       ├── Icon.tsx
+│       ├── Logo.tsx
+│       └── Rating.tsx
+├── hooks/
+│   └── useContentData.ts
+├── types/
+│   └── content.ts
+├── utils/
+│   └── helpers.ts
+├── index.css
+├── App.tsx
+├── main.tsx
+└── vite-env.d.ts
+```
