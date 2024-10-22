@@ -18,11 +18,11 @@
       },
       {
         "text": "Store",
-        "link": "/store"
+        "link": ""
       },
       {
         "text": "About",
-        "link": "/about"
+        "link": ""
       }
     ]
   },
@@ -60,25 +60,25 @@
         "icon": "Shirt",
         "title": "Character Skin Pack",
         "buttonText": "Add to Cart",
-        "buttonLink": "/cart/add/schools-out-skin-pack"
+        "buttonLink": ""
       },
       {
         "icon": "Rocket",
         "title": "Booster Bundle",
         "buttonText": "Add to Cart",
-        "buttonLink": "/cart/add/schools-out-booster-bundle"
+        "buttonLink": ""
       },
       {
         "icon": "Music",
         "title": "Soundtrack Album",
         "buttonText": "Add to Cart",
-        "buttonLink": "/cart/add/schools-out-soundtrack"
+        "buttonLink": ""
       },
       {
         "icon": "Trophy",
         "title": "Pro Player Pack",
         "buttonText": "Add to Cart",
-        "buttonLink": "/cart/add/schools-out-pro-pack"
+        "buttonLink": ""
       }
     ]
   },
@@ -141,15 +141,11 @@
         "links": [
           {
             "text": "About Us",
-            "url": "/about"
-          },
-          {
-            "text": "Careers",
-            "url": "/careers"
+            "url": ""
           },
           {
             "text": "Contact",
-            "url": "/contact"
+            "url": ""
           }
         ]
       },
@@ -158,11 +154,11 @@
         "links": [
           {
             "text": "School's Out!",
-            "url": "/games/schools-out"
+            "url": "/schools-out"
           },
           {
             "text": "Upcoming Titles",
-            "url": "/games/upcoming"
+            "url": ""
           }
         ]
       },
@@ -171,15 +167,15 @@
         "links": [
           {
             "text": "FAQ",
-            "url": "/support/faq"
+            "url": ""
           },
           {
             "text": "Forums",
-            "url": "/support/forums"
+            "url": ""
           },
           {
             "text": "Game Guide",
-            "url": "/support/schools-out-guide"
+            "url": ""
           }
         ]
       },
@@ -188,11 +184,11 @@
         "links": [
           {
             "text": "Privacy Policy",
-            "url": "/legal/privacy"
+            "url": ""
           },
           {
             "text": "Terms of Service",
-            "url": "/legal/terms"
+            "url": ""
           }
         ]
       }

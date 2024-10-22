@@ -32,14 +32,24 @@ export function ProductsShowcase() {
                   </h3>
                 </div>
                 <div className="mt-4">
-                  <a
-                    href={product.buttonLink}
-                    className="relative flex bg-indigo-600 border border-transparent rounded-md py-2 px-8 items-center justify-center text-sm font-medium text-white hover:bg-indigo-700"
-                  >
-                    <IconComponent className="h-4 w-4 mr-2" />
-                    {product.buttonText}
-                    <span className="sr-only">, {product.title}</span>
-                  </a>
+                  {product.buttonLink ? (
+                    <a
+                      href={product.buttonLink}
+                      className="relative flex bg-indigo-600 border border-transparent rounded-md py-2 px-8 items-center justify-center text-sm font-medium text-white hover:bg-indigo-700"
+                    >
+                      <IconComponent className="h-4 w-4 mr-2" />
+                      {product.buttonText}
+                      <span className="sr-only">, {product.title}</span>
+                    </a>
+                  ) : (
+                    <span
+                      className="relative flex bg-gray-400 border border-transparent rounded-md py-2 px-8 items-center justify-center text-sm font-medium text-white cursor-not-allowed"
+                    >
+                      <IconComponent className="h-4 w-4 mr-2" />
+                      {product.buttonText}
+                      <span className="sr-only">, {product.title}</span>
+                    </span>
+                  )}
                 </div>
               </div>
             )
