@@ -55,6 +55,9 @@ export interface SocialProofItem {
 export interface SocialProofContent {
   headline: string
   items: SocialProofItem[]
+  ctaText: string
+  ctaLink: string
+  ctaIcon: string
 }
 
 export interface FAQItem {
@@ -88,6 +91,19 @@ export interface FooterContent {
   copyright: string
 }
 
+export interface GoodBuySection {
+  rating: number
+  headline: string
+  subheadline: string
+  ctaText: string
+  ctaLink: string
+  ctaIcon: string
+  quote: {
+    text: string
+    icon: string
+  }
+}
+
 export interface ContentData {
   stickyBar: StickyBarContent
   header: HeaderContent
@@ -97,4 +113,5 @@ export interface ContentData {
   socialProof: SocialProofContent
   faq: FAQContent
   footer: FooterContent
+  goodBuy: GoodBuySection
 }

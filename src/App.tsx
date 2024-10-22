@@ -7,6 +7,7 @@ import { ProductsShowcase } from './components/home/ProductsShowcase'
 import { SocialProofSection } from './components/home/SocialProofSection'
 import { FAQSection } from './components/home/FAQSection'
 import { Footer } from './components/layout/Footer'
+import { GoodBuySection } from './components/home/GoodBuySection'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <ProductsShowcase />
           <SocialProofSection />
           <FAQSection />
+          <GoodBuySection />
         </main>
         <Footer />
       </div>

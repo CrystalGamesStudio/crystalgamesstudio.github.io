@@ -52,7 +52,14 @@ Below described elements should appear on the page, one after another in the giv
 
     Questions and answers should be configurable in the `content.json` file.
 
-8. Footer section
+8. GoodBuy section
+
+    On the top of this section there is a rating of the key product. It contains a headline and a subheadline.
+    Below there is a call to action button with icon and text. Under the button there is a quote from the social proof section with an icon on the left side of the quote.
+
+    CTA text, link and icon should be configurable in the `content.json` file.
+
+9. Footer section
 
     Multiple columns with links (site map, social media links, policy links, etc.) and copyright.
 
@@ -72,12 +79,8 @@ src/
 │   │   ├── FeaturesSection.tsx
 │   │   ├── ProductsShowcase.tsx
 │   │   ├── SocialProofSection.tsx
+│   │   ├── GoodBuySection.tsx
 │   │   └── FAQSection.tsx
-│   └── common/
-│       ├── Button.tsx
-│       ├── Icon.tsx
-│       ├── Logo.tsx
-│       └── Rating.tsx
 ├── hooks/
 │   └── useContentData.ts
 ├── types/

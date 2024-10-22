@@ -100,7 +100,10 @@
         "quote": "The most immersive multiplayer experience I've ever had.",
         "rating": 5
       }
-    ]
+    ],
+    "ctaText": "Play Now",
+    "ctaLink": "/play-crystal-realms",
+    "ctaIcon": "Percent"
   },
   "faq": {
     "headline": "Frequently Asked Questions",
@@ -117,80 +120,93 @@
         "question": "How often do you release new content?",
         "answer": "We release major content updates every three months, with smaller events and balance patches on a monthly basis."
       }
-    ]},
-    "footer": {
-      "columns": [
-        {
-          "title": "Company",
-          "links": [
-            {
-              "text": "About Us",
-              "url": "/about"
-            },
-            {
-              "text": "Careers",
-              "url": "/careers"
-            },
-            {
-              "text": "Contact",
-              "url": "/contact"
-            }
-          ]
-        },
-        {
-          "title": "Games",
-          "links": [
-            {
-              "text": "Crystal Realms",
-              "url": "/games/crystal-realms"
-            },
-            {
-              "text": "Upcoming Titles",
-              "url": "/games/upcoming"
-            }
-          ]
-        },
-        {
-          "title": "Support",
-          "links": [
-            {
-              "text": "FAQ",
-              "url": "/support/faq"
-            },
-            {
-              "text": "Forums",
-              "url": "/support/forums"
-            },
-            {
-              "text": "Account Support",
-              "url": "/support/account"
-            }
-          ]
-        },
-        {
-          "title": "Legal",
-          "links": [
-            {
-              "text": "Privacy Policy",
-              "url": "/legal/privacy"
-            },
-            {
-              "text": "Terms of Service",
-              "url": "/legal/terms"
-            }
-          ]
-        }
-      ],
-      "socialMedia": [
-        {
-          "icon": "Twitter",
-          "url": "https://twitter.com/crystalgames"
-        },
-        {
-          "icon": "Youtube",
-          "url": "https://youtube.com/crystalgamesstudio"
-        }
-      ],
-      "copyright": "© 2024 CrystalGames Studio. All rights reserved."
+    ]
+  },
+  "goodBuy": {
+    "rating": 5,
+    "headline": "Ready to embark on your Crystal Realms adventure?",
+    "subheadline": "Join millions of players in the most immersive fantasy world ever created",
+    "ctaText": "Start Your Journey",
+    "ctaLink": "/play-crystal-realms",
+    "ctaIcon": "Rocket",
+    "quote": {
+      "text": "Crystal Realms is a game-changer in the fantasy RPG genre!",
+      "icon": "Quote"
+    }
+  },
+  "footer": {
+    "columns": [
+      {
+        "title": "Company",
+        "links": [
+          {
+            "text": "About Us",
+            "url": "/about"
+          },
+          {
+            "text": "Careers",
+            "url": "/careers"
+          },
+          {
+            "text": "Contact",
+            "url": "/contact"
+          }
+        ]
+      },
+      {
+        "title": "Games",
+        "links": [
+          {
+            "text": "Crystal Realms",
+            "url": "/games/crystal-realms"
+          },
+          {
+            "text": "Upcoming Titles",
+            "url": "/games/upcoming"
+          }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          {
+            "text": "FAQ",
+            "url": "/support/faq"
+          },
+          {
+            "text": "Forums",
+            "url": "/support/forums"
+          },
+          {
+            "text": "Account Support",
+            "url": "/support/account"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "text": "Privacy Policy",
+            "url": "/legal/privacy"
+          },
+          {
+            "text": "Terms of Service",
+            "url": "/legal/terms"
+          }
+        ]
+      }
+    ],
+    "socialMedia": [
+      {
+        "icon": "Twitter",
+        "url": "https://twitter.com/crystalgames"
+      },
+      {
+        "icon": "Youtube",
+        "url": "https://youtube.com/crystalgamesstudio"
+      }
+    ],
+    "copyright": "© 2024 CrystalGames Studio. All rights reserved."
   }
 }

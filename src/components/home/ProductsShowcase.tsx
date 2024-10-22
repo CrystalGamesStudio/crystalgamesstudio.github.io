@@ -18,20 +18,18 @@ export function ProductsShowcase() {
             const IconComponent = getIconComponent(product.icon)
             return (
               <div key={index} className="group relative">
-                <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <div className="w-full min-h-60 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-60 lg:aspect-none">
                   <div className="w-full h-full flex items-center justify-center text-gray-500">
                     <IconComponent className="h-20 w-20" />
                   </div>
                 </div>
-                <div className="mt-4 flex justify-between">
-                  <div>
-                    <h3 className="text-sm text-gray-700 text-center">
-                      <a href={product.buttonLink} className="block">
-                        <span aria-hidden="true" className="absolute inset-0" />
-                        {product.title}
-                      </a>
-                    </h3>
-                  </div>
+                <div className="mt-4 flex justify-center">
+                  <h3 className="text-sm text-gray-700">
+                    <a href={product.buttonLink} className="block">
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      {product.title}
+                    </a>
+                  </h3>
                 </div>
                 <div className="mt-4">
                   <a
