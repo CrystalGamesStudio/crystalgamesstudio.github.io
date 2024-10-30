@@ -203,6 +203,8 @@
         "url": "https://youtube.com/crystalgamesstudio"
       }
     ],
-    "copyright": "© 2024 CrystalGames Studio. All rights reserved."
+    "copyright": "CrystalGames Studio.",
+    "copyrightLink": "https://crystalgames.studio",
+    "copyrightReserve": "All rights reserved"
   }
 }
