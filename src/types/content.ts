@@ -20,6 +20,7 @@ export interface HeroContent {
   subheadline: string
   ctaText: string
   ctaLink: string
+  backgroundSvg: string
 }
 
 export interface FeatureItem {
@@ -89,6 +90,8 @@ export interface FooterContent {
   columns: FooterColumn[]
   socialMedia: SocialMediaLink[]
   copyright: string
+  copyrightLink: string
+  copyrightReserve: string
 }
 
 export interface GoodBuySection {
