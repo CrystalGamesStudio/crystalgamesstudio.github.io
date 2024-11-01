@@ -30,12 +30,12 @@ export function HeroSection() {
                             <h1 className={cn(
                                 "text-4xl tracking-tight font-extrabold",
                                 "text-transparent bg-clip-text",
-                                "bg-gradient-to-r from-white via-indigo-200 to-purple-200",
+                                "bg-gradient-to-r from-white/90 via-indigo-100 to-purple-100",
                                 neonText,
                                 "sm:text-5xl md:text-6xl"
                             )}>
                                 <span className={cn(
-                                    "block xl:inline",
+                                    "block xl:inline text-white/90",
                                     pulseAnimation
                                 )}>
                                     {hero.headline}

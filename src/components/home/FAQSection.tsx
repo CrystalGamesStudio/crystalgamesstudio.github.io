@@ -29,7 +29,7 @@ export function FAQSection() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className={cn(
           "text-3xl font-extrabold text-center mb-8",
-          "text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-200 to-purple-200",
+          "text-transparent bg-clip-text bg-gradient-to-r from-white via-indigo-400 to-purple-400",
           glowAnimation
         )}>
           {faq.headline}
@@ -39,7 +39,7 @@ export function FAQSection() {
             <div 
               key={index} 
               className={cn(
-                "bg-gray-800/50 backdrop-blur-sm",
+                "bg-white/30 backdrop-blur-sm",
                 "rounded-lg overflow-hidden",
                 pixelBorder,
                 pixelCard,
