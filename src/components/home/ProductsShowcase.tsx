@@ -36,7 +36,7 @@ export function ProductsShowcase() {
                   </div>
                 </div>
                 <div className="mt-4 flex-grow flex flex-col p-4">
-                  <h3 className="text-lg font-bold text-indigo-300 text-center mb-4">
+                  <h3 className="text-lg font-bold text-white/80 text-center mb-4">
                     {product.title}
                   </h3>
                   <div className="mt-auto">
