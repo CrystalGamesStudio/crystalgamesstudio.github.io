@@ -11,7 +11,7 @@ type Game = {
 const games: Game[] = [
   {
     title: "School's Out!",
-    imageUrl: "/images/schools-out-cover.jpg", // We'll need to add this image later
+    imageUrl: "/images/schoolsout.png",
     review: "Amazing arcade game! Engaging gameplay and unique mechanics make it impossible to put down!",
     link: "/schools-out"
   }
