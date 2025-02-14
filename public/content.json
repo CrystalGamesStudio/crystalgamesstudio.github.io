@@ -21,8 +21,8 @@
         "link": ""
       },
       {
-        "text": "About",
-        "link": ""
+        "text": "Contact",
+        "link": "/contact"
       }
     ]
   },
@@ -146,7 +146,7 @@
           },
           {
             "text": "Contact",
-            "url": ""
+            "url": "/contact"
           }
         ]
       },
@@ -156,6 +156,10 @@
           {
             "text": "School's Out!",
             "url": "/schools-out"
+          },
+          {
+            "text": "Coin Collector",
+            "url": "/coin-collector"
           },
           {
             "text": "Upcoming Titles",
@@ -197,11 +201,11 @@
     "socialMedia": [
       {
         "icon": "Twitter",
-        "url": "https://twitter.com/crystalgames"
+        "url": "https://x.com/CrystalStudio64"
       },
       {
         "icon": "Youtube",
-        "url": "https://youtube.com/crystalgamesstudio"
+        "url": "https://www.youtube.com/@CrystalGamesStudio-l9z"
       }
     ],
     "copyright": "CrystalGames Studio.",

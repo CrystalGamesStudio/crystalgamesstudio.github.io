@@ -14,6 +14,12 @@ const games: Game[] = [
     imageUrl: "/images/schoolsout.png",
     review: "Amazing arcade game! Engaging gameplay and unique mechanics make it impossible to put down!",
     link: "/schools-out"
+  },
+  {
+    title: "Coin Collector",
+    imageUrl: "/images/coincollector.png",
+    review: "Exciting coin-collecting adventure with addictive gameplay and challenging levels. Can you collect them all?",
+    link: "/coin-collector"
   }
 ]
 
@@ -31,7 +37,8 @@ function GameCard({ game }: { game: Game }) {
         "text-2xl font-bold text-center py-4",
         "bg-gradient-to-r from-indigo-400 to-purple-400",
         "bg-clip-text text-transparent",
-        glowAnimation
+        glowAnimation,
+        "animate-floating"
       )}>
         {game.title}
       </h3>

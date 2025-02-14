@@ -9,6 +9,7 @@ import { FAQSection } from './components/home/FAQSection'
 import { Footer } from './components/layout/Footer'
 import { GoodBuySection } from './components/home/GoodBuySection'
 import { Games } from './pages/Games'
+import { Contact } from './pages/Contact'
 
 function HomePage() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/games" element={<Games />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
