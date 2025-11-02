@@ -97,6 +97,60 @@ export function Games() {
           {games.map((game, index) => (
             <GameCard key={index} game={game} />
           ))}
+          
+          <div className={cn(
+            "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
+            "rounded-xl overflow-hidden",
+            "border border-indigo-500/30",
+            "shadow-lg shadow-indigo-500/20",
+            "transition-all duration-300 hover:scale-105",
+            "hover:shadow-xl hover:shadow-indigo-500/30"
+          )}>
+            <h3 className={cn(
+              "text-2xl font-bold text-center py-4",
+              "bg-gradient-to-r from-indigo-400 to-purple-400",
+              "bg-clip-text text-transparent",
+              glowAnimation,
+              "animate-floating"
+            )}>
+              Coming Soon
+            </h3>
+            
+            <div className={cn(
+              "relative aspect-video",
+              "bg-gradient-to-br from-gray-800 to-gray-900",
+              "flex items-center justify-center"
+            )}>
+              <p className={cn(
+                "text-indigo-300 text-xl font-medium"
+              )}>
+                Coming Soon
+              </p>
+            </div>
+            
+            <div className="p-6">
+              <p className={cn(
+                "text-indigo-200 text-center",
+                "italic mb-4"
+              )}>
+                "New games are on the way!"
+              </p>
+              
+              <button
+                disabled
+                className={cn(
+                  "w-full",
+                  "py-2 px-4 rounded-lg",
+                  "bg-gray-700",
+                  "text-gray-400 font-medium",
+                  "cursor-not-allowed",
+                  "transition-all duration-300"
+                )}
+              >
+                Coming Soon
+              </button>
+            </div>
+          </div>
         </div>
       </main>
     </div>

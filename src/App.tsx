@@ -9,6 +9,9 @@ import { FAQSection } from './components/home/FAQSection'
 import { Footer } from './components/layout/Footer'
 import { GoodBuySection } from './components/home/GoodBuySection'
 import { Games } from './pages/Games'
+import { Services } from './pages/Services'
+import { Egrator } from './pages/Egrator'
+import { About } from './pages/About'
 import { Contact } from './pages/Contact'
 
 function HomePage() {
@@ -35,6 +38,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/games" element={<Games />} />
+          <Route path="/apps" element={<Services />} />
+          <Route path="/egrator" element={<Egrator />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
