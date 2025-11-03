@@ -2,7 +2,7 @@
   "stickyBar": {
     "icon": "Backpack",
     "text": "Discover our games and apps - Play now!",
-    "link": "/games"
+    "link": "/products"
   },
   "header": {
     "icon": "Gem",
@@ -13,12 +13,8 @@
         "link": "/"
       },
       {
-        "text": "Games",
-        "link": "/games"
-      },
-      {
-        "text": "Apps",
-        "link": "/apps"
+        "text": "Products",
+        "link": "/products"
       },
       {
         "text": "Store",
@@ -34,7 +30,7 @@
     "headline": "Welcome to CrystalGames Studio",
     "subheadline": "Innovative games and cutting-edge apps that combine passion with technology. Explore our collection of web games and desktop applications.",
     "ctaText": "Explore Our Products",
-    "ctaLink": "/games",
+    "ctaLink": "/products",
     "backgroundSvg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 800' className='w-full h-full opacity-20'><defs><linearGradient id='crystal-grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:#4F46E5;stop-opacity:0.3'/><stop offset='100%' style='stop-color:#A855F7;stop-opacity:0.3'/></linearGradient></defs><!-- Crystal --><path d='M400,100 L450,150 L425,200 L375,200 L350,150 Z' fill='url(#crystal-grad)' stroke='#ffffff30' stroke-width='2'/><!-- Gamepad --><path d='M300,300 L500,300 L520,400 L280,400 Z' fill='url(#crystal-grad)' stroke='#ffffff30' stroke-width='2'/><circle cx='350' cy='350' r='15' fill='#ffffff20'/><circle cx='450' cy='350' r='15' fill='#ffffff20'/><rect x='380' y='330' width='40' height='10' fill='#ffffff20'/><!-- Hero Character --><path d='M600,200 L650,250 L650,350 L600,400 L550,350 L550,250 Z' fill='url(#crystal-grad)' stroke='#ffffff30' stroke-width='2'/><circle cx='600' cy='270' r='20' fill='#ffffff'/><circle cx='600' cy='270' r='5' fill='#fff'/><circle cx='600' cy='270' r='15' fill='none' stroke='#fff' stroke-width='2' opacity='0.2'><animate attributeName='r' from='15' to='30' dur='2s' repeatCount='indefinite'/></circle></svg>"
   },
   "features": {
@@ -83,7 +79,7 @@
         "icon": "Star",
         "title": "More Coming Soon",
         "buttonText": "View All",
-        "buttonLink": "/games"
+        "buttonLink": "/products"
       }
     ]
   },
@@ -107,27 +103,236 @@
       }
     ],
     "ctaText": "Explore All Products",
-    "ctaLink": "/games",
+    "ctaLink": "/products",
     "ctaIcon": "PlayCircle"
   },
   "faq": {
     "headline": "Frequently Asked Questions",
-    "items": [
+    "categories": [
       {
-        "question": "What platforms are your games available on?",
-        "answer": "Our games are web-based and playable on both desktop and mobile devices through your browser. No installation required!"
+        "name": "Entertainment",
+        "items": [
+          {
+            "question": "What types of games does CrystalGames Studio create?",
+            "answer": "We create a variety of web-based games including arcade adventures, puzzle games, and action-packed experiences. Our games focus on unique mechanics and engaging gameplay."
+          },
+          {
+            "question": "Are your games suitable for all ages?",
+            "answer": "Most of our games are designed to be family-friendly and suitable for players of all ages. We focus on creating fun, engaging content without mature themes."
+          },
+          {
+            "question": "Can I play your games offline?",
+            "answer": "Our games are primarily web-based and require an internet connection to play. However, some features may work offline once initially loaded."
+          },
+          {
+            "question": "Do you have multiplayer games?",
+            "answer": "Currently, our games are primarily single-player experiences. We're always exploring new game mechanics and multiplayer features for future releases!"
+          },
+          {
+            "question": "How often do you release new games?",
+            "answer": "We're constantly working on new projects! While we don't have a fixed release schedule, we aim to surprise our community with fresh content regularly."
+          },
+          {
+            "question": "Can I stream or record gameplay?",
+            "answer": "Absolutely! We encourage content creators to stream and share gameplay of our games. Feel free to create videos, tutorials, or live streams."
+          },
+          {
+            "question": "Are there achievements or leaderboards?",
+            "answer": "Many of our games feature scoring systems and leaderboards. Check each game's features page for specific details about achievements and competitive elements."
+          },
+          {
+            "question": "What makes your games unique?",
+            "answer": "We focus on innovative mechanics, beautiful design, and player engagement. Each game features something special, whether it's unique controls, creative challenges, or innovative features like Morse code combos."
+          },
+          {
+            "question": "Can I request features or give feedback?",
+            "answer": "Yes! We love hearing from our community. Visit our contact page or join our WhatsApp channel to share your ideas and feedback with us."
+          },
+          {
+            "question": "Do you plan to release games on mobile app stores?",
+            "answer": "While our current games are web-based, we're exploring options for native mobile apps. Stay tuned for updates on our social media channels!"
+          }
+        ]
       },
       {
-        "question": "Are your games free to play?",
-        "answer": "Yes! Most of our games are free to play. We offer optional in-game purchases for cosmetic items and enhancements."
+        "name": "About",
+        "items": [
+          {
+            "question": "What is CrystalGames Studio?",
+            "answer": "CrystalGames Studio is a game development company focused on creating innovative games and applications that combine passion with technology. We're dedicated to delivering unique gaming experiences."
+          },
+          {
+            "question": "When was CrystalGames Studio founded?",
+            "answer": "We're a growing studio passionate about creating quality games and apps. Our team is committed to innovation and community engagement."
+          },
+          {
+            "question": "What is your mission?",
+            "answer": "Our mission is to create exceptional gaming and application experiences that combine innovative technological solutions with creative entertainment that engages and inspires players worldwide."
+          },
+          {
+            "question": "How can I join your team?",
+            "answer": "We're always looking for talented individuals who share our passion for gaming and technology. Contact us through our contact page to learn about current opportunities."
+          },
+          {
+            "question": "Do you work with other developers?",
+            "answer": "We collaborate with talented developers, artists, and creators. If you're interested in partnership opportunities, reach out to us through our contact page."
+          },
+          {
+            "question": "What technologies do you use?",
+            "answer": "We use modern web technologies for our games, Electron for desktop applications, and cutting-edge frameworks to deliver the best possible experience."
+          },
+          {
+            "question": "Where are you located?",
+            "answer": "CrystalGames Studio operates as a digital-first company. We have a global reach and work with team members and players from around the world."
+          },
+          {
+            "question": "How can I stay updated with your latest news?",
+            "answer": "Follow us on X (@CrystalStudio64), subscribe to our YouTube channel, or join our WhatsApp community channel for the latest updates and announcements."
+          },
+          {
+            "question": "Do you participate in game jams or events?",
+            "answer": "We actively participate in the gaming community through various events and activities. Follow our social media to see where we'll be next!"
+          },
+          {
+            "question": "What are your future plans?",
+            "answer": "We're constantly working on new games, improving existing ones, and developing innovative applications. Our roadmap includes exciting features and new titles that we can't wait to share!"
+          }
+        ]
       },
       {
-        "question": "What is EgraTor Browser?",
-        "answer": "EgraTor is a modern desktop browser built on Electron and Chromium, featuring a beautiful neumorphism design and powerful tools for productivity and gaming."
+        "name": "Games",
+        "items": [
+          {
+            "question": "What platforms are your games available on?",
+            "answer": "Our games are web-based and playable on both desktop and mobile devices through your browser. No installation required - just open and play!"
+          },
+          {
+            "question": "Are your games free to play?",
+            "answer": "Yes! Most of our games are free to play. We offer optional in-game purchases for cosmetic items and enhancements, but the core gameplay is always accessible."
+          },
+          {
+            "question": "How do I start playing School's Out!?",
+            "answer": "Simply visit the School's Out! page and click 'Play Now'. Use spacebar to jump, manage your energy, and try Morse code combos with the Enter key for bonuses!"
+          },
+          {
+            "question": "How do I play Coin Collector?",
+            "answer": "Use arrow keys to move your character, collect all coins on each level, avoid obstacles, and reach the exit to complete the level. Check our Game Guide for detailed instructions!"
+          },
+          {
+            "question": "Do your games save progress?",
+            "answer": "Many of our games feature automatic save functionality using browser local storage. Your progress, scores, and achievements are saved automatically."
+          },
+          {
+            "question": "Can I reset my game progress?",
+            "answer": "Yes, you can usually clear your browser's local storage or use in-game reset options if available. Check the settings menu in each game for reset options."
+          },
+          {
+            "question": "Are there in-game purchases?",
+            "answer": "Some games offer optional in-game purchases for cosmetic items, character skins, boosters, or premium content. These are always optional and never required to enjoy the game."
+          },
+          {
+            "question": "Do you have controller support?",
+            "answer": "While our games are primarily designed for keyboard/mouse and touch controls, some may support gamepads. Check individual game pages for controller compatibility information."
+          },
+          {
+            "question": "Can I play on mobile devices?",
+            "answer": "Absolutely! Our web-based games are fully responsive and optimized for mobile browsers. You can play on smartphones and tablets with touch controls."
+          },
+          {
+            "question": "What if I encounter a bug or technical issue?",
+            "answer": "Please contact us through our contact page or reach out via our social media channels. We're committed to fixing issues quickly and appreciate your feedback!"
+          }
+        ]
       },
       {
-        "question": "How can I download EgraTor Browser?",
-        "answer": "Visit our EgraTor page to download the latest release directly from GitHub. Available for Windows, macOS, and Linux."
+        "name": "Apps",
+        "items": [
+          {
+            "question": "What is EgraTor Browser?",
+            "answer": "EgraTor is a modern desktop browser built on Electron and Chromium, featuring a beautiful neumorphism design and powerful tools for productivity and gaming."
+          },
+          {
+            "question": "How can I download EgraTor Browser?",
+            "answer": "Visit our EgraTor page (/egrator) to download the latest release directly from GitHub. Available for Windows, macOS, and Linux operating systems."
+          },
+          {
+            "question": "Is EgraTor Browser free?",
+            "answer": "Yes, EgraTor Browser is completely free and open-source. You can download and use it without any cost or subscription."
+          },
+          {
+            "question": "What features does EgraTor Browser have?",
+            "answer": "EgraTor includes AI Assistant, password manager, bookmarks, downloads, notes, split view, extensions support, and many productivity tools. Check the EgraTor page for full feature list."
+          },
+          {
+            "question": "Does EgraTor work on all operating systems?",
+            "answer": "EgraTor is available for Windows, macOS, and Linux. Visit the EgraTor download page to get the version for your operating system."
+          },
+          {
+            "question": "Is my data secure with EgraTor?",
+            "answer": "EgraTor uses electron-store for secure local data storage. Your passwords, bookmarks, and personal data are stored locally on your device and never transmitted to external servers."
+          },
+          {
+            "question": "Can I sync data across devices?",
+            "answer": "Currently, EgraTor stores data locally on each device. Cloud sync features may be added in future updates based on user feedback and demand."
+          },
+          {
+            "question": "How do I install extensions in EgraTor?",
+            "answer": "EgraTor supports extensions similar to Chromium browsers. You can install extensions through the Extensions menu in the right panel."
+          },
+          {
+            "question": "Does EgraTor support developer tools?",
+            "answer": "Yes! Press F12 or use the Dev Mode action to access developer tools for web development and debugging."
+          },
+          {
+            "question": "Will you release more desktop apps?",
+            "answer": "We're always exploring new ideas and technologies. Stay connected with us to be the first to know about new application releases!"
+          }
+        ]
+      },
+      {
+        "name": "General",
+        "items": [
+          {
+            "question": "How can I contact CrystalGames Studio?",
+            "answer": "You can reach us through our contact page (/contact), via email, or through our social media channels on X and YouTube. We'd love to hear from you!"
+          },
+          {
+            "question": "Do you have a community or Discord server?",
+            "answer": "Yes! We have a WhatsApp community channel where you can chat with other players, get updates, and connect with the team. Find the link on our contact page."
+          },
+          {
+            "question": "Can I use your content for my projects?",
+            "answer": "Our games and applications are protected by copyright. For usage rights, licensing, or partnership inquiries, please contact us through our contact page."
+          },
+          {
+            "question": "How do you handle user privacy?",
+            "answer": "We take privacy seriously. Check our Privacy Policy page for detailed information about how we collect, use, and protect your personal information."
+          },
+          {
+            "question": "What are your terms of service?",
+            "answer": "You can read our complete Terms of Service on our Terms page. These outline the rules and guidelines for using our games and services."
+          },
+          {
+            "question": "Do you offer refunds for in-game purchases?",
+            "answer": "Refund policies depend on the platform and purchase method. Contact us through our support channels, and we'll help you with any refund requests."
+          },
+          {
+            "question": "Can I report inappropriate content or behavior?",
+            "answer": "Absolutely. If you encounter any inappropriate content or behavior in our games or community, please report it immediately through our contact page."
+          },
+          {
+            "question": "Do you have a newsletter or mailing list?",
+            "answer": "Stay updated by following our social media channels and joining our WhatsApp community. We share all major announcements and updates there."
+          },
+          {
+            "question": "How do I unsubscribe from communications?",
+            "answer": "If you've subscribed to any of our communications, you can unsubscribe by following the link in the email or contacting us directly through our contact page."
+          },
+          {
+            "question": "Do you have a bug bounty or security program?",
+            "answer": "We take security seriously. If you discover a security vulnerability, please contact us immediately through our contact page with details, and we'll address it promptly."
+          }
+        ]
       }
     ]
   },
@@ -136,7 +341,7 @@
     "headline": "Ready to Start Your Journey?",
     "subheadline": "Join our community and discover amazing games and apps crafted with passion and innovation!",
     "ctaText": "Get Started",
-    "ctaLink": "/games",
+    "ctaLink": "/products",
     "ctaIcon": "Gamepad2",
     "quote": {
       "text": "CrystalGames Studio brings innovation and fun together in every product!",
@@ -180,7 +385,7 @@
         "links": [
           {
             "text": "FAQ",
-            "url": ""
+            "url": "/faq"
           },
           {
             "text": "Forums",
@@ -188,7 +393,7 @@
           },
           {
             "text": "Game Guide",
-            "url": ""
+            "url": "/game-guide"
           }
         ]
       },
@@ -197,11 +402,11 @@
         "links": [
           {
             "text": "Privacy Policy",
-            "url": ""
+            "url": "/privacy"
           },
           {
             "text": "Terms of Service",
-            "url": ""
+            "url": "/terms"
           }
         ]
       }

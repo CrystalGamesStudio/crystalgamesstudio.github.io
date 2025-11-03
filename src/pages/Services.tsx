@@ -54,14 +54,13 @@ export function Services() {
             <div className={cn(
               "aspect-video bg-gray-800 rounded-lg",
               "border border-indigo-500/30",
-              "flex items-center justify-center",
-              "overflow-hidden mb-4"
+              "overflow-hidden mb-4",
+              "relative"
             )}>
-              <iframe
-                src="https://egrator.com"
-                className="w-full h-full"
-                title="EgraTor Browser"
-                allow="fullscreen"
+              <img
+                src="/images/egrator.png"
+                alt="EgraTor Browser Screenshot"
+                className="w-full h-full object-cover"
               />
             </div>
             
