@@ -17,10 +17,6 @@ import {
   Link2,
   Code,
   Zap,
-  Home,
-  Briefcase,
-  Play,
-  Users,
   Settings,
   Github
 } from 'lucide-react'
