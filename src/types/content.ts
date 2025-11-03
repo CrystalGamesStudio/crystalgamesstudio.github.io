@@ -66,9 +66,15 @@ export interface FAQItem {
   answer: string
 }
 
+export interface FAQCategory {
+  name: string
+  items: FAQItem[]
+}
+
 export interface FAQContent {
   headline: string
-  items: FAQItem[]
+  categories?: FAQCategory[]
+  items?: FAQItem[] // Keep for backward compatibility
 }
 
 export interface FooterLink {
