@@ -37,6 +37,7 @@ export interface FeaturesContent {
 
 export interface ProductItem {
   icon: string
+  imageUrl?: string
   title: string
   buttonText: string
   buttonLink: string

@@ -61,6 +61,14 @@ export default {
                     '0%': { backgroundPosition: '0% 0%' },
                     '100%': { backgroundPosition: '200% 200%' },
                 },
+                'bounce-slow': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)',
+                    },
+                    '50%': {
+                        transform: 'translateY(-8px)',
+                    },
+                },
             },
             animation: {
                 pulse: 'pulse 2s ease-in-out infinite',
@@ -73,6 +81,7 @@ export default {
                 glitch: 'glitch 3s infinite',
                 energyPulse: 'energyPulse 4s ease-in-out infinite',
                 cyberpunkGlow: 'cyberpunkGlow 8s linear infinite',
+                'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
             },
             boxShadow: {
                 'neon': '0 0 5px theme(colors.indigo.400), 0 0 20px theme(colors.indigo.600)',

@@ -28,12 +28,20 @@ export function ProductsShowcase() {
                 )}
               >
                 <div className="w-full aspect-w-1 aspect-h-1 bg-gradient-to-br from-indigo-900 to-purple-900 rounded-t-md overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center p-6">
-                    <IconComponent className={cn(
-                      "h-20 w-20 text-indigo-300",
-                      glowAnimation
-                    )} />
-                  </div>
+                  {product.imageUrl ? (
+                    <img
+                      src={product.imageUrl}
+                      alt={product.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center p-6">
+                      <IconComponent className={cn(
+                        "h-20 w-20 text-indigo-300",
+                        glowAnimation
+                      )} />
+                    </div>
+                  )}
                 </div>
                 <div className="mt-4 flex-grow flex flex-col p-4">
                   <h3 className="text-lg font-bold text-white/80 text-center mb-4">
