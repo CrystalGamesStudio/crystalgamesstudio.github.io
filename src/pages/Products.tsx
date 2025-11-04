@@ -156,7 +156,7 @@ const apps = [
   {
     title: "EgraTor",
     description: "Multi-functional browser for games and more",
-    imageUrl: "/images/egrator.png",
+    imageUrl: "/images/EgraTor-card image.png",
     link: "/egrator"
   }
 ]

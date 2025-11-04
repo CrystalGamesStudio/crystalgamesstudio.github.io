@@ -17,8 +17,8 @@
         "link": "/products"
       },
       {
-        "text": "Store",
-        "link": ""
+        "text": "Profile",
+        "link": "/profile"
       },
       {
         "text": "Contact",
@@ -59,18 +59,21 @@
     "items": [
       {
         "icon": "Gamepad2",
+        "imageUrl": "/images/schoolsout.png",
         "title": "School's Out!",
         "buttonText": "Play Now",
         "buttonLink": "/schools-out"
       },
       {
         "icon": "CircleDollarSign",
+        "imageUrl": "/images/coincollector.png",
         "title": "Coin Collector",
         "buttonText": "Play Now",
         "buttonLink": "/coin-collector"
       },
       {
         "icon": "Globe",
+        "imageUrl": "/images/EgraTor-card image.png",
         "title": "EgraTor Browser",
         "buttonText": "Learn More",
         "buttonLink": "/egrator"
