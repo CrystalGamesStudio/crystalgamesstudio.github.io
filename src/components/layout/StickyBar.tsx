@@ -2,6 +2,7 @@ import { useContentData } from '../../hooks/useContentData'
 import { cn, getIconComponent } from '../../utils/helpers'
 import { ContentData } from '../../types/content'
 import { glowAnimation } from '../../utils/game-effects'
+import { Link } from 'react-router-dom'
 
 export function StickyBar() {
   const { stickyBar } = useContentData() as ContentData
@@ -31,25 +32,49 @@ export function StickyBar() {
               "h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0",
               glowAnimation
             )} />
-            <a
-              href={stickyBar.link}
-              className={cn(
-                "text-sm sm:text-base font-medium",
-                "hover:text-indigo-100 transition-colors",
-                "relative group"
-              )}
-            >
-              {/* Hover effect underline */}
-              <span className="relative">
-                {stickyBar.text}
-                <span className={cn(
-                  "absolute bottom-0 left-0 w-full h-0.5",
-                  "bg-gradient-to-r from-indigo-400 to-purple-400",
-                  "transform scale-x-0 group-hover:scale-x-100",
-                  "transition-transform duration-300 origin-left"
-                )} />
-              </span>
-            </a>
+            {stickyBar.link.startsWith('/') ? (
+              <Link
+                to={stickyBar.link}
+                className={cn(
+                  "text-sm sm:text-base font-medium",
+                  "hover:text-indigo-100 transition-colors",
+                  "relative group"
+                )}
+              >
+                {/* Hover effect underline */}
+                <span className="relative">
+                  {stickyBar.text}
+                  <span className={cn(
+                    "absolute bottom-0 left-0 w-full h-0.5",
+                    "bg-gradient-to-r from-indigo-400 to-purple-400",
+                    "transform scale-x-0 group-hover:scale-x-100",
+                    "transition-transform duration-300 origin-left"
+                  )} />
+                </span>
+              </Link>
+            ) : (
+              <a
+                href={stickyBar.link}
+                className={cn(
+                  "text-sm sm:text-base font-medium",
+                  "hover:text-indigo-100 transition-colors",
+                  "relative group"
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {/* Hover effect underline */}
+                <span className="relative">
+                  {stickyBar.text}
+                  <span className={cn(
+                    "absolute bottom-0 left-0 w-full h-0.5",
+                    "bg-gradient-to-r from-indigo-400 to-purple-400",
+                    "transform scale-x-0 group-hover:scale-x-100",
+                    "transition-transform duration-300 origin-left"
+                  )} />
+                </span>
+              </a>
+            )}
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { useContentData } from '../../hooks/useContentData'
 import { ContentData } from '../../types/content'
 import { cn } from '../../utils/helpers'
 import { pulseAnimation, pixelBorder, gameButton, neonText } from '../../utils/game-effects'
+import { Link } from 'react-router-dom'
 
 export function HeroSection() {
     const { hero } = useContentData() as ContentData
@@ -46,20 +47,39 @@ export function HeroSection() {
                             </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                                 <div>
-                                    <a
-                                        href={hero.ctaLink}
-                                        className={cn(
-                                            "w-full flex items-center justify-center px-8 py-3 text-base font-medium",
-                                            "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
-                                            "text-white rounded-lg transform transition-all",
-                                            pixelBorder,
-                                            gameButton,
-                                            "hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600",
-                                            "md:py-4 md:text-lg md:px-10"
-                                        )}
-                                    >
-                                        {hero.ctaText}
-                                    </a>
+                                    {hero.ctaLink.startsWith('/') ? (
+                                        <Link
+                                            to={hero.ctaLink}
+                                            className={cn(
+                                                "w-full flex items-center justify-center px-8 py-3 text-base font-medium",
+                                                "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+                                                "text-white rounded-lg transform transition-all",
+                                                pixelBorder,
+                                                gameButton,
+                                                "hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600",
+                                                "md:py-4 md:text-lg md:px-10"
+                                            )}
+                                        >
+                                            {hero.ctaText}
+                                        </Link>
+                                    ) : (
+                                        <a
+                                            href={hero.ctaLink}
+                                            className={cn(
+                                                "w-full flex items-center justify-center px-8 py-3 text-base font-medium",
+                                                "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+                                                "text-white rounded-lg transform transition-all",
+                                                pixelBorder,
+                                                gameButton,
+                                                "hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600",
+                                                "md:py-4 md:text-lg md:px-10"
+                                            )}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {hero.ctaText}
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </div>

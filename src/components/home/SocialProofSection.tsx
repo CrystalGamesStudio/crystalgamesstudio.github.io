@@ -10,6 +10,7 @@ import {
   floatAnimation,
   pixelCard
 } from '../../utils/game-effects'
+import { Link } from 'react-router-dom'
 
 export function SocialProofSection() {
   const { socialProof } = useContentData() as ContentData
@@ -88,22 +89,43 @@ export function SocialProofSection() {
         </div>
 
         <div className="flex justify-center">
-          <a
-            href={socialProof.ctaLink}
-            className={cn(
-              "inline-flex items-center justify-center",
-              "px-6 py-3 text-lg font-medium",
-              "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
-              "text-white rounded-lg",
-              pixelBorder,
-              gameButton,
-              "hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600",
-              "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            )}
-          >
-            {CtaIcon && <CtaIcon className={cn("mr-2 h-5 w-5", glowAnimation)} />}
-            {socialProof.ctaText}
-          </a>
+          {socialProof.ctaLink.startsWith('/') ? (
+            <Link
+              to={socialProof.ctaLink}
+              className={cn(
+                "inline-flex items-center justify-center",
+                "px-6 py-3 text-lg font-medium",
+                "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+                "text-white rounded-lg",
+                pixelBorder,
+                gameButton,
+                "hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600",
+                "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              )}
+            >
+              {CtaIcon && <CtaIcon className={cn("mr-2 h-5 w-5", glowAnimation)} />}
+              {socialProof.ctaText}
+            </Link>
+          ) : (
+            <a
+              href={socialProof.ctaLink}
+              className={cn(
+                "inline-flex items-center justify-center",
+                "px-6 py-3 text-lg font-medium",
+                "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+                "text-white rounded-lg",
+                pixelBorder,
+                gameButton,
+                "hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600",
+                "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {CtaIcon && <CtaIcon className={cn("mr-2 h-5 w-5", glowAnimation)} />}
+              {socialProof.ctaText}
+            </a>
+          )}
         </div>
       </div>
     </section>

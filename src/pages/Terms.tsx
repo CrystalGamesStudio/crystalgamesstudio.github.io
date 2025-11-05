@@ -1,6 +1,7 @@
 import { cn } from '../utils/helpers'
 import { glowAnimation } from '../utils/game-effects'
 import { FileText } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export function Terms() {
   return (
@@ -212,9 +213,9 @@ export function Terms() {
               </h2>
               <p className="text-indigo-200 leading-relaxed">
                 If you have any questions about these Terms of Service, please contact us at{" "}
-                <a href="/contact" className="text-indigo-400 hover:text-indigo-300 underline">
+                <Link to="/contact" className="text-indigo-400 hover:text-indigo-300 underline">
                   our contact page
-                </a>.
+                </Link>.
               </p>
             </section>
           </div>

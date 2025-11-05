@@ -12,6 +12,7 @@ import {
   cyberpunkCard,
   neonText
 } from '../../utils/game-effects'
+import { Link } from 'react-router-dom'
 
 export function GoodBuySection() {
   const { goodBuy } = useContentData() as ContentData
@@ -73,26 +74,51 @@ export function GoodBuySection() {
         </div>
 
         <div className="flex justify-center mb-12 relative z-20">
-          <a
-            href={goodBuy.ctaLink}
-            className={cn(
-              "inline-flex items-center justify-center",
-              "px-8 py-4 text-lg font-bold",
-              "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
-              "text-white rounded-lg transform transition-all",
-              pixelBorder,
-              gameButton,
-              "hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600",
-              "hover:scale-105",
-              "shadow-[0_0_20px_0_rgba(99,102,241,0.3)]",
-              "relative"
-            )}
-          >
-            {CtaIcon && (
-              <CtaIcon className={cn("mr-2 h-6 w-6", glowAnimation)} />
-            )}
-            {goodBuy.ctaText}
-          </a>
+          {goodBuy.ctaLink.startsWith('/') ? (
+            <Link
+              to={goodBuy.ctaLink}
+              className={cn(
+                "inline-flex items-center justify-center",
+                "px-8 py-4 text-lg font-bold",
+                "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+                "text-white rounded-lg transform transition-all",
+                pixelBorder,
+                gameButton,
+                "hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600",
+                "hover:scale-105",
+                "shadow-[0_0_20px_0_rgba(99,102,241,0.3)]",
+                "relative"
+              )}
+            >
+              {CtaIcon && (
+                <CtaIcon className={cn("mr-2 h-6 w-6", glowAnimation)} />
+              )}
+              {goodBuy.ctaText}
+            </Link>
+          ) : (
+            <a
+              href={goodBuy.ctaLink}
+              className={cn(
+                "inline-flex items-center justify-center",
+                "px-8 py-4 text-lg font-bold",
+                "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+                "text-white rounded-lg transform transition-all",
+                pixelBorder,
+                gameButton,
+                "hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600",
+                "hover:scale-105",
+                "shadow-[0_0_20px_0_rgba(99,102,241,0.3)]",
+                "relative"
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {CtaIcon && (
+                <CtaIcon className={cn("mr-2 h-6 w-6", glowAnimation)} />
+              )}
+              {goodBuy.ctaText}
+            </a>
+          )}
         </div>
 
         <div className={cn(

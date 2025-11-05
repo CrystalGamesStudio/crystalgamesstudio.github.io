@@ -3,6 +3,7 @@ import { ContentData } from '../../types/content'
 import { getIconComponent } from '../../utils/helpers'
 import { cn } from '../../utils/helpers'
 import { glowAnimation, pixelBorder } from '../../utils/game-effects'
+import { Link } from 'react-router-dom'
 
 export function Footer() {
   const { footer } = useContentData() as ContentData
@@ -31,12 +32,23 @@ export function Footer() {
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
                       {link.url ? (
-                        <a 
-                          href={link.url} 
-                          className="text-base text-indigo-300 hover:text-indigo-100 transition-colors"
-                        >
-                          {link.text}
-                        </a>
+                        link.url.startsWith('/') ? (
+                          <Link 
+                            to={link.url} 
+                            className="text-base text-indigo-300 hover:text-indigo-100 transition-colors"
+                          >
+                            {link.text}
+                          </Link>
+                        ) : (
+                          <a 
+                            href={link.url} 
+                            className="text-base text-indigo-300 hover:text-indigo-100 transition-colors"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {link.text}
+                          </a>
+                        )
                       ) : (
                         <span className="text-base text-gray-600 cursor-not-allowed">
                           {link.text}
@@ -71,12 +83,23 @@ export function Footer() {
           </div>
           <p className="mt-8 text-base text-indigo-400/60 md:mt-0 md:order-1">
             {`© ${new Date().getFullYear()}  `}
-            <a 
-              href={footer.copyrightLink} 
-              className="text-indigo-400 hover:text-indigo-300 transition-colors"
-            >
-              {footer.copyright}
-            </a> {footer.copyrightReserve}
+            {footer.copyrightLink.startsWith('/') ? (
+              <Link 
+                to={footer.copyrightLink} 
+                className="text-indigo-400 hover:text-indigo-300 transition-colors"
+              >
+                {footer.copyright}
+              </Link>
+            ) : (
+              <a 
+                href={footer.copyrightLink} 
+                className="text-indigo-400 hover:text-indigo-300 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {footer.copyright}
+              </a>
+            )} {footer.copyrightReserve}
           </p>
         </div>
       </div>
