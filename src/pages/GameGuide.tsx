@@ -1,6 +1,6 @@
 import { cn } from '../utils/helpers'
 import { glowAnimation } from '../utils/game-effects'
-import { BookOpen, Gamepad2, Keyboard, Zap, Trophy, ArrowLeft, ArrowRight, Space } from 'lucide-react'
+import { BookOpen, Gamepad2, Keyboard, Zap, Trophy, ArrowLeft, Space } from 'lucide-react'
 
 export function GameGuide() {
   return (

@@ -8,7 +8,7 @@ import {
   updateProfile,
   updateEmail
 } from 'firebase/auth'
-import { ref, uploadBytes, getDownloadURL, uploadBytesResumable } from 'firebase/storage'
+import { ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage'
 import { auth, storage } from '../config/firebase'
 import { cn } from '../utils/helpers'
 import { glowAnimation, pixelBorder, gameButton } from '../utils/game-effects'
@@ -22,9 +22,7 @@ import {
   X, 
   Camera,
   Settings,
-  Shield,
-  Calendar,
-  Globe
+  Shield
 } from 'lucide-react'
 import { NotificationContainer, useNotifications } from '../components/ui/Notification'
 import { ImageCropModal } from '../components/ui/ImageCropModal'
@@ -363,8 +361,8 @@ export function Profile() {
                       src={photoURL} 
                       alt="Profile" 
                       className="w-full h-full object-cover"
-                      onError={(e) => {
-                        console.error('Failed to load profile photo:', photoURL)
+                      onError={(error) => {
+                        console.error('Failed to load profile photo:', photoURL, error)
                         setPhotoURL(null)
                         addNotification('Failed to load profile photo', 'error')
                       }}
