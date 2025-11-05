@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { 
   signInWithEmailAndPassword, 
+  createUserWithEmailAndPassword,
   signInWithPopup, 
   GoogleAuthProvider, 
   signOut, 
@@ -35,9 +36,49 @@ const shortenUID = (uid: string) => {
   return `${uid.substring(0, 8)}...${uid.substring(uid.length - 4)}`
 }
 
+// Helper function to get user-friendly error messages
+const getErrorMessage = (error: any): string => {
+  const errorCode = error.code || ''
+  const errorMessage = error.message || 'An error occurred'
+  
+  switch (errorCode) {
+    case 'auth/email-already-in-use':
+      return 'This email is already registered. Please sign in instead.'
+    case 'auth/invalid-email':
+      return 'Invalid email address. Please check your email.'
+    case 'auth/operation-not-allowed':
+      return 'This sign-in method is not enabled. Please contact support.'
+    case 'auth/weak-password':
+      return 'Password is too weak. Please use at least 6 characters.'
+    case 'auth/user-disabled':
+      return 'This account has been disabled. Please contact support.'
+    case 'auth/user-not-found':
+      return 'No account found with this email. Please sign up first.'
+    case 'auth/wrong-password':
+      return 'Incorrect password. Please try again.'
+    case 'auth/invalid-credential':
+      return 'Invalid email or password. Please check your credentials.'
+    case 'auth/popup-closed-by-user':
+      return 'Sign-in popup was closed. Please try again.'
+    case 'auth/popup-blocked':
+      return 'Popup was blocked by your browser. Please allow popups and try again.'
+    case 'auth/cancelled-popup-request':
+      return 'Only one popup request is allowed at a time. Please try again.'
+    case 'auth/network-request-failed':
+      return 'Network error. Please check your internet connection.'
+    default:
+      // If it's a Firebase error, try to extract a readable message
+      if (errorMessage.includes('Firebase')) {
+        return 'Firebase authentication error. Please check your configuration.'
+      }
+      return errorMessage
+  }
+}
+
 export function Profile() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [isSignUp, setIsSignUp] = useState(false)
   const [loading, setLoading] = useState(false)
   const [googleLoading, setGoogleLoading] = useState(false)
   const [user, setUser] = useState<User | null>(null)
@@ -80,11 +121,24 @@ export function Profile() {
     setLoading(true)
 
     try {
-      await signInWithEmailAndPassword(auth, email, password)
-      addNotification('Successfully signed in!', 'success')
+      if (isSignUp) {
+        // Register new user
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+        // Optionally set a default display name from email
+        if (userCredential.user && !userCredential.user.displayName) {
+          const displayName = email.split('@')[0]
+          await updateProfile(userCredential.user, { displayName })
+        }
+        addNotification('Account created successfully!', 'success')
+      } else {
+        // Sign in existing user
+        await signInWithEmailAndPassword(auth, email, password)
+        addNotification('Successfully signed in!', 'success')
+      }
     } catch (err: any) {
-      const errorMessage = err.message || 'An error occurred'
+      const errorMessage = getErrorMessage(err)
       addNotification(errorMessage, 'error')
+      console.error('Authentication error:', err)
     } finally {
       setLoading(false)
     }
@@ -97,8 +151,9 @@ export function Profile() {
       await signInWithPopup(auth, googleProvider)
       addNotification('Successfully signed in with Google!', 'success')
     } catch (err: any) {
-      const errorMessage = err.message || 'An error occurred during Google sign in'
+      const errorMessage = getErrorMessage(err)
       addNotification(errorMessage, 'error')
+      console.error('Google sign-in error:', err)
     } finally {
       setGoogleLoading(false)
     }
@@ -740,11 +795,13 @@ export function Profile() {
           "bg-clip-text text-transparent",
           glowAnimation
         )}>
-          Sign In
+          {isSignUp ? 'Create Account' : 'Sign In'}
         </h2>
         
         <p className="text-indigo-200 text-center mb-6">
-          Welcome back! Please sign in to your account.
+          {isSignUp 
+            ? 'Create a new account to get started' 
+            : 'Welcome back! Please sign in to your account.'}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -816,9 +873,21 @@ export function Profile() {
               gameButton
             )}
           >
-            {loading ? 'Loading...' : 'Sign In'}
+            {loading ? 'Loading...' : (isSignUp ? 'Sign Up' : 'Sign In')}
           </button>
         </form>
+
+        <div className="mt-4 text-center">
+          <button
+            type="button"
+            onClick={() => setIsSignUp(!isSignUp)}
+            className="text-indigo-300 hover:text-indigo-100 text-sm transition-colors"
+          >
+            {isSignUp 
+              ? 'Already have an account? Sign in' 
+              : "Don't have an account? Sign up"}
+          </button>
+        </div>
 
         <div className="mt-6">
           <div className="relative">

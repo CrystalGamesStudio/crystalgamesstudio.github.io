@@ -3,6 +3,7 @@ import { ContentData } from '../../types/content'
 import { getIconComponent } from '../../utils/helpers'
 import { cn } from '../../utils/helpers'
 import { glowAnimation, pixelBorder, gameButton } from '../../utils/game-effects'
+import { Link } from 'react-router-dom'
 
 export function ProductsShowcase() {
   const { productsShowcase } = useContentData() as ContentData
@@ -49,20 +50,39 @@ export function ProductsShowcase() {
                   </h3>
                   <div className="mt-auto">
                     {product.buttonLink ? (
-                      <a
-                        href={product.buttonLink}
-                        className={cn(
-                          "flex items-center justify-center px-4 py-2",
-                          "bg-gradient-to-r from-indigo-500 to-purple-500",
-                          "text-white rounded-md font-medium",
-                          pixelBorder,
-                          gameButton,
-                          "hover:from-indigo-600 hover:to-purple-600"
-                        )}
-                      >
-                        <IconComponent className="h-4 w-4 mr-2" />
-                        {product.buttonText}
-                      </a>
+                      product.buttonLink.startsWith('/') ? (
+                        <Link
+                          to={product.buttonLink}
+                          className={cn(
+                            "flex items-center justify-center px-4 py-2",
+                            "bg-gradient-to-r from-indigo-500 to-purple-500",
+                            "text-white rounded-md font-medium",
+                            pixelBorder,
+                            gameButton,
+                            "hover:from-indigo-600 hover:to-purple-600"
+                          )}
+                        >
+                          <IconComponent className="h-4 w-4 mr-2" />
+                          {product.buttonText}
+                        </Link>
+                      ) : (
+                        <a
+                          href={product.buttonLink}
+                          className={cn(
+                            "flex items-center justify-center px-4 py-2",
+                            "bg-gradient-to-r from-indigo-500 to-purple-500",
+                            "text-white rounded-md font-medium",
+                            pixelBorder,
+                            gameButton,
+                            "hover:from-indigo-600 hover:to-purple-600"
+                          )}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <IconComponent className="h-4 w-4 mr-2" />
+                          {product.buttonText}
+                        </a>
+                      )
                     ) : (
                       <span className="flex items-center justify-center px-4 py-2 bg-gray-700 text-gray-400 rounded-md cursor-not-allowed">
                         <IconComponent className="h-4 w-4 mr-2" />
