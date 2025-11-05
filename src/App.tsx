@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { StickyBar } from './components/layout/StickyBar'
 import { Header } from './components/layout/Header'
 import { HeroSection } from './components/home/HeroSection'
@@ -16,8 +16,6 @@ import { GameGuide } from './pages/GameGuide'
 import { FAQ } from './pages/FAQ'
 import { Profile } from './pages/Profile'
 import { Contact } from './pages/Contact'
-import { useEffect } from 'react'
-import { Navigate } from 'react-router-dom'
 
 function HomePage() {
   return (
@@ -34,17 +32,8 @@ function HomePage() {
 }
 
 function App() {
-  // Obsługa przekierowania z 404.html dla GitHub Pages
-  useEffect(() => {
-    const path = window.location.pathname
-    if (path.includes('/?/')) {
-      const cleanPath = path.split('/?/')[1].replace(/~and~/g, '&')
-      window.history.replaceState(null, '', '/' + cleanPath)
-    }
-  }, [])
-
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="flex flex-col min-h-screen">
         <StickyBar />
         <Header />
@@ -64,7 +53,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
