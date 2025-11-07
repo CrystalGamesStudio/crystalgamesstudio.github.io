@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { 
   signInWithEmailAndPassword, 
   createUserWithEmailAndPassword,
@@ -23,7 +24,8 @@ import {
   X, 
   Camera,
   Settings,
-  Shield
+  Shield,
+  Users
 } from 'lucide-react'
 import { NotificationContainer, useNotifications } from '../components/ui/Notification'
 import { ImageCropModal } from '../components/ui/ImageCropModal'
@@ -730,7 +732,7 @@ export function Profile() {
               </div>
             </div>
 
-            {/* Additional Info */}
+            {/* Friends & Groups */}
             <div className={cn(
               "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
               "rounded-xl overflow-hidden",
@@ -744,23 +746,23 @@ export function Profile() {
                   "bg-indigo-600/20",
                   "border border-indigo-500/30"
                 )}>
-                  <Settings className="h-5 w-5 text-indigo-300" />
+                  <Users className="h-5 w-5 text-indigo-300" />
                 </div>
-                <h2 className="text-xl font-bold text-white">Account Settings</h2>
+                <h2 className="text-xl font-bold text-white">Social</h2>
               </div>
               
-              <div className="space-y-4">
-                <div>
-                  <p className="text-indigo-200 text-sm mb-1">Provider</p>
-                  <p className="text-white font-medium">
-                    {user.providerData[0]?.providerId === 'google.com' ? 'Google' : 'Email/Password'}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-indigo-200 text-sm mb-1">Account Status</p>
-                  <p className="text-green-400 font-medium">Active</p>
-                </div>
-              </div>
+              <ul className="space-y-4">
+                <li>
+                  <span className="text-base text-gray-600 cursor-not-allowed">
+                    Friends
+                  </span>
+                </li>
+                <li>
+                  <span className="text-base text-gray-600 cursor-not-allowed">
+                    Groups
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
