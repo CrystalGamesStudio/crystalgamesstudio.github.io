@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
 import { 
   signInWithEmailAndPassword, 
   createUserWithEmailAndPassword,
@@ -23,7 +22,6 @@ import {
   Save, 
   X, 
   Camera,
-  Settings,
   Shield,
   Users
 } from 'lucide-react'
