@@ -136,50 +136,44 @@ export function Egrator() {
                 {latestRelease.assets.length > 0 ? (
                   <div className="space-y-3">
                     {latestRelease.assets.map((asset, index) => (
-                      <a
+                      <button
                         key={index}
-                        href={asset.browser_download_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        disabled
                         className={cn(
-                          "block p-4 rounded-lg",
-                          "bg-gradient-to-r from-indigo-600 to-purple-600",
-                          "text-white font-medium",
-                          "hover:from-indigo-500 hover:to-purple-500",
+                          "block p-4 rounded-lg w-full",
+                          "bg-gray-700",
+                          "text-gray-400 font-medium",
                           "transition-all duration-300",
-                          "shadow-lg shadow-indigo-500/20",
-                          "hover:shadow-xl hover:shadow-indigo-500/30",
-                          "flex items-center justify-between"
+                          "shadow-lg",
+                          "flex items-center justify-between",
+                          "cursor-not-allowed opacity-50"
                         )}
                       >
                         <div className="flex items-center space-x-3">
                           <Download className="h-5 w-5" />
                           <div className="text-left">
                             <p className="font-semibold">{asset.name}</p>
-                            <p className="text-sm text-indigo-200">{formatFileSize(asset.size)}</p>
+                            <p className="text-sm text-gray-500">{formatFileSize(asset.size)}</p>
                           </div>
                         </div>
                         <Download className="h-5 w-5" />
-                      </a>
+                      </button>
                     ))}
                   </div>
                 ) : (
-                  <a
-                    href={latestRelease.html_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    disabled
                     className={cn(
                       "inline-block px-6 py-3 rounded-lg",
-                      "bg-gradient-to-r from-indigo-600 to-purple-600",
-                      "text-white font-medium",
-                      "hover:from-indigo-500 hover:to-purple-500",
+                      "bg-gray-700",
+                      "text-gray-400 font-medium",
                       "transition-all duration-300",
-                      "shadow-lg shadow-indigo-500/20",
-                      "hover:shadow-xl hover:shadow-indigo-500/30"
+                      "shadow-lg",
+                      "cursor-not-allowed opacity-50"
                     )}
                   >
                     View All Releases
-                  </a>
+                  </button>
                 )}
               </div>
             ) : (
@@ -187,23 +181,20 @@ export function Egrator() {
                 <p className="text-indigo-300 mb-4">
                   Failed to load release information
                 </p>
-                <a
-                  href={`https://github.com/${GITHUB_REPO_OWNER}/${GITHUB_REPO_NAME}/releases`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  disabled
                   className={cn(
                     "inline-flex items-center space-x-2 px-6 py-3 rounded-lg",
-                    "bg-gradient-to-r from-indigo-600 to-purple-600",
-                    "text-white font-medium",
-                    "hover:from-indigo-500 hover:to-purple-500",
+                    "bg-gray-700",
+                    "text-gray-400 font-medium",
                     "transition-all duration-300",
-                    "shadow-lg shadow-indigo-500/20",
-                    "hover:shadow-xl hover:shadow-indigo-500/30"
+                    "shadow-lg",
+                    "cursor-not-allowed opacity-50"
                   )}
                 >
                   <Github className="h-5 w-5" />
                   <span>View Releases on GitHub</span>
-                </a>
+                </button>
               </div>
             )}
           </div>
