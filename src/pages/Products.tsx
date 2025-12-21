@@ -1,6 +1,6 @@
 import { cn } from '../utils/helpers'
 import { glowAnimation } from '../utils/game-effects'
-import { Globe, Clock } from 'lucide-react'
+import { Globe, Clock, Database } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 type Game = {
@@ -82,7 +82,8 @@ function GameCard({ game }: { game: Game }) {
   )
 }
 
-function AppCard({ app }: { app: { title: string; description: string; imageUrl?: string; link: string } }) {
+function AppCard({ app }: { app: { title: string; description: string; imageUrl?: string; link: string; icon?: React.ComponentType<{ className?: string }>; buttonText?: string } }) {
+  const IconComponent = app.icon || Globe
   return (
     <div className={cn(
       "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
@@ -99,7 +100,7 @@ function AppCard({ app }: { app: { title: string; description: string; imageUrl?
           "bg-gradient-to-br from-indigo-600 to-purple-600",
           "shadow-lg shadow-indigo-500/30"
         )}>
-          <Globe className="h-6 w-6 text-white" />
+          <IconComponent className="h-6 w-6 text-white" />
         </div>
         <h2 className={cn(
           "text-2xl font-bold",
@@ -146,7 +147,7 @@ function AppCard({ app }: { app: { title: string; description: string; imageUrl?
           "hover:shadow-xl hover:shadow-indigo-500/30"
         )}
       >
-        Learn More
+        {app.buttonText || "Learn More"}
       </Link>
     </div>
   )
@@ -157,7 +158,16 @@ const apps = [
     title: "EgraTor",
     description: "Multi-functional browser for games and more",
     imageUrl: "/images/EgraTor-card image.png",
-    link: "/egrator"
+    link: "/egrator",
+    icon: Globe
+  },
+  {
+    title: "Librus API",
+    description: "API service for Librus integration",
+    imageUrl: "/images/librus-api-pic.png",
+    link: "/librus-api",
+    icon: Database,
+    buttonText: "Check Out"
   }
 ]
 
