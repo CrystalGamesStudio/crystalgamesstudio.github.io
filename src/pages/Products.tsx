@@ -1,6 +1,6 @@
 import { cn } from '../utils/helpers'
 import { glowAnimation } from '../utils/game-effects'
-import { Globe, Clock, Database } from 'lucide-react'
+import { Globe, Clock, Database, Trophy, Users, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 type Game = {
@@ -82,7 +82,7 @@ function GameCard({ game }: { game: Game }) {
   )
 }
 
-function AppCard({ app }: { app: { title: string; description: string; imageUrl?: string; link: string; icon?: React.ComponentType<{ className?: string }>; buttonText?: string } }) {
+function AppCard({ app }: { app: { title: string; description: string; imageUrl?: string; link: string; icon?: React.ComponentType<{ className?: string }>; buttonText?: string; openLink?: string; openExternal?: boolean } }) {
   const IconComponent = app.icon || Globe
   return (
     <div className={cn(
@@ -111,14 +111,14 @@ function AppCard({ app }: { app: { title: string; description: string; imageUrl?
           {app.title}
         </h2>
       </div>
-      
+
       <p className={cn(
         "text-indigo-200 mb-4",
         "leading-relaxed"
       )}>
         {app.description}
       </p>
-      
+
       {app.imageUrl && (
         <div className={cn(
           "aspect-video bg-gray-800 rounded-lg",
@@ -133,22 +133,75 @@ function AppCard({ app }: { app: { title: string; description: string; imageUrl?
           />
         </div>
       )}
-      
-      <Link
-        to={app.link}
-        className={cn(
-          "w-full block text-center",
-          "py-2 px-4 rounded-lg",
-          "bg-gradient-to-r from-indigo-600 to-purple-600",
-          "text-white font-medium",
-          "hover:from-indigo-500 hover:to-purple-500",
-          "transition-all duration-300",
-          "shadow-lg shadow-indigo-500/20",
-          "hover:shadow-xl hover:shadow-indigo-500/30"
-        )}
-      >
-        {app.buttonText || "Learn More"}
-      </Link>
+
+      {app.openLink ? (
+        <div className="flex gap-3">
+          {app.openExternal ? (
+            <a
+              href={app.openLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "flex-1 flex items-center justify-center gap-2",
+                "py-2 px-4 rounded-lg",
+                "bg-gradient-to-r from-indigo-600 to-purple-600",
+                "text-white font-medium",
+                "hover:from-indigo-500 hover:to-purple-500",
+                "transition-all duration-300",
+                "shadow-lg shadow-indigo-500/20",
+                "hover:shadow-xl hover:shadow-indigo-500/30"
+              )}
+            >
+              Open <ExternalLink className="h-4 w-4" />
+            </a>
+          ) : (
+            <Link
+              to={app.openLink}
+              className={cn(
+                "flex-1 block text-center",
+                "py-2 px-4 rounded-lg",
+                "bg-gradient-to-r from-indigo-600 to-purple-600",
+                "text-white font-medium",
+                "hover:from-indigo-500 hover:to-purple-500",
+                "transition-all duration-300",
+                "shadow-lg shadow-indigo-500/20",
+                "hover:shadow-xl hover:shadow-indigo-500/30"
+              )}
+            >
+              Open
+            </Link>
+          )}
+          <Link
+            to={app.link}
+            className={cn(
+              "flex-1 block text-center",
+              "py-2 px-4 rounded-lg",
+              "border border-indigo-500/50 bg-indigo-900/30",
+              "text-indigo-200 font-medium",
+              "hover:bg-indigo-800/50",
+              "transition-all duration-300"
+            )}
+          >
+            More
+          </Link>
+        </div>
+      ) : (
+        <Link
+          to={app.link}
+          className={cn(
+            "w-full block text-center",
+            "py-2 px-4 rounded-lg",
+            "bg-gradient-to-r from-indigo-600 to-purple-600",
+            "text-white font-medium",
+            "hover:from-indigo-500 hover:to-purple-500",
+            "transition-all duration-300",
+            "shadow-lg shadow-indigo-500/20",
+            "hover:shadow-xl hover:shadow-indigo-500/30"
+          )}
+        >
+          {app.buttonText || "Learn More"}
+        </Link>
+      )}
     </div>
   )
 }
@@ -168,6 +221,23 @@ const apps = [
     link: "/librus-api",
     icon: Database,
     buttonText: "Check Out"
+  },
+  {
+    title: "ExSize",
+    description: "Family task management with gamification — motivate children through tasks, rewards and virtual currency",
+    imageUrl: "/images/exsize-preview.png",
+    link: "/products/exsize",
+    icon: Trophy,
+    openLink: "https://exsize.pages.dev",
+    openExternal: true
+  },
+  {
+    title: "Wspolniak",
+    description: "A new app from CrystalGames Studio — coming soon",
+    imageUrl: "/images/wspolniak-preview.png",
+    link: "/products/wspolniak",
+    icon: Users,
+    openLink: "/products/wspolniak"
   }
 ]
 
