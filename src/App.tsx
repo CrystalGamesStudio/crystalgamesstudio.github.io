@@ -1,5 +1,4 @@
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { StickyBar } from './components/layout/StickyBar'
 import { Header } from './components/layout/Header'
 import { ScrollToTop } from './components/layout/ScrollToTop'
 import { HeroSection } from './components/home/HeroSection'
@@ -39,7 +38,6 @@ function App() {
     <HashRouter>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
-        <StickyBar />
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

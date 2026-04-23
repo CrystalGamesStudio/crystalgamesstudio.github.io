@@ -237,7 +237,8 @@ const apps = [
     imageUrl: "/images/wspolniak-preview.png",
     link: "/products/wspolniak",
     icon: Users,
-    openLink: "/products/wspolniak"
+    openLink: "https://wspolniak.com",
+    openExternal: true
   }
 ]
 

@@ -1,6 +1,6 @@
 import { cn } from '../utils/helpers'
 import { glowAnimation } from '../utils/game-effects'
-import { Mail, Twitter, Youtube, CheckCircle, AlertCircle, Loader2, Phone } from 'lucide-react'
+import { Mail, Twitter, Youtube, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import { useState, FormEvent } from 'react'
 
 // Formspree endpoint - zastąp swoim
@@ -120,45 +120,6 @@ export function Contact() {
                 >
                   <Youtube className="h-6 w-6" />
                   <span>YouTube</span>
-                </a>
-              </div>
-
-              {/* WhatsApp Community */}
-              <div className={cn(
-                "p-6 rounded-lg",
-                "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
-                "border border-indigo-500/30",
-                "transition-all duration-300",
-                "hover:shadow-lg hover:shadow-emerald-500/20",
-                "group"
-              )}>
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-indigo-300">Join Our Community</h3>
-                  <span className={cn(
-                    "px-2 py-1 rounded-full text-xs font-bold",
-                    "bg-emerald-500/20 text-emerald-300",
-                    "border border-emerald-500/30"
-                  )}>
-                    New!
-                  </span>
-                </div>
-                <p className="text-indigo-200 mb-4">
-                  Join our WhatsApp channel to receive the latest updates, chat with other players, and stay up to date with all the news!
-                </p>
-                <a
-                  href="https://whatsapp.com/channel/0029Vb5pBYj1iUxXbkVkuy1f"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    "flex items-center space-x-2 p-2 rounded-lg",
-                    "text-indigo-300 hover:text-emerald-300",
-                    "transition-all duration-300",
-                    "hover:bg-emerald-500/10",
-                    "group-hover:scale-105"
-                  )}
-                >
-                  <Phone className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" />
-                  <span className="font-medium">Join WhatsApp Channel →</span>
                 </a>
               </div>
             </div>
