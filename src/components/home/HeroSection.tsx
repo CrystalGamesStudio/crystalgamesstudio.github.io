@@ -3,6 +3,7 @@ import { ContentData } from '../../types/content'
 import { cn } from '../../utils/helpers'
 import { pulseAnimation, pixelBorder, gameButton, neonText } from '../../utils/game-effects'
 import { Link } from 'react-router-dom'
+import { ExternalLink } from 'lucide-react'
 
 export function HeroSection() {
     const { hero } = useContentData() as ContentData
@@ -45,7 +46,7 @@ export function HeroSection() {
                             <p className="mt-3 text-base text-indigo-200 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                                 {hero.subheadline}
                             </p>
-                            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start sm:gap-4">
                                 <div>
                                     {hero.ctaLink.startsWith('/') ? (
                                         <Link
@@ -80,6 +81,24 @@ export function HeroSection() {
                                             {hero.ctaText}
                                         </a>
                                     )}
+                                </div>
+                                <div className="mt-3 sm:mt-0">
+                                    <a
+                                        href="https://wspolniak.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={cn(
+                                            "w-full flex items-center justify-center gap-2 px-8 py-3 text-base font-medium",
+                                            "bg-gradient-to-r from-purple-500 to-pink-500",
+                                            "text-white rounded-lg transform transition-all",
+                                            pixelBorder,
+                                            gameButton,
+                                            "hover:from-purple-600 hover:to-pink-600",
+                                            "md:py-4 md:text-lg md:px-10"
+                                        )}
+                                    >
+                                        Try Wspólniak <ExternalLink className="h-4 w-4" />
+                                    </a>
                                 </div>
                             </div>
                         </div>

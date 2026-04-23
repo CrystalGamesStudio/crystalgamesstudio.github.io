@@ -69,6 +69,10 @@ export default {
                         transform: 'translateY(-8px)',
                     },
                 },
+                rainbowScroll: {
+                    '0%': { backgroundPosition: '0% 50%' },
+                    '100%': { backgroundPosition: '200% 50%' },
+                },
             },
             animation: {
                 pulse: 'pulse 2s ease-in-out infinite',
@@ -82,6 +86,7 @@ export default {
                 energyPulse: 'energyPulse 4s ease-in-out infinite',
                 cyberpunkGlow: 'cyberpunkGlow 8s linear infinite',
                 'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
+                rainbowScroll: 'rainbowScroll 3s linear infinite',
             },
             boxShadow: {
                 'neon': '0 0 5px theme(colors.indigo.400), 0 0 20px theme(colors.indigo.600)',
