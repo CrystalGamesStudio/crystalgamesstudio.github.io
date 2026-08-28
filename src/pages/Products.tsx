@@ -41,7 +41,7 @@ const apps: Product[] = [
   {
     title: "umux",
     imageUrl: "/images/umux-preview.png",
-    description: "Open-source terminal workspace manager for Ubuntu (Wayland) — persistent project workspaces, split panels, and desktop notifications when AI CLI tasks finish.",
+    description: "Open-source terminal workspace manager for Linux, macOS and Windows — persistent project workspaces, tabs & split panels, SSH, agent status, and desktop notifications when AI CLI tasks finish. v1.0 is out now!",
     link: "/products/umux",
     openLink: "https://github.com/CrystalPlatforms/umux",
   },

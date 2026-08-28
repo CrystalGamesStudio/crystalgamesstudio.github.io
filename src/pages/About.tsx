@@ -202,7 +202,7 @@ export function About() {
                   </h3>
                   <p className="text-indigo-300">
                     We develop modern desktop applications — including umux, an open-source
-                    terminal workspace manager for Ubuntu — combining native performance with elegant design.
+                    terminal workspace manager for Linux, macOS and Windows — combining native performance with elegant design.
                   </p>
                 </div>
               </div>

@@ -13,7 +13,11 @@ import {
   Cpu,
   Code2,
   Boxes,
-  Rocket
+  Rocket,
+  Apple,
+  AppWindow,
+  Activity,
+  History
 } from 'lucide-react'
 
 export function Umux() {
@@ -44,13 +48,11 @@ export function Umux() {
               "text-indigo-300 text-lg",
               "max-w-2xl mx-auto"
             )}>
-              An open-source terminal workspace manager for Ubuntu (Wayland). Organize terminals into persistent project workspaces, split panels, and get notified when long-running AI CLI tasks finish.
+              An open-source terminal workspace manager for Linux, macOS and Windows. Organize terminals into persistent project workspaces, split panels, and get notified when long-running AI CLI tasks finish.
             </p>
           </div>
 
-          {/* Download for Ubuntu — placeholder na plik */}
-          {/* TODO: Gdy umux będzie gotowy, podmień tę sekcję na prawdziwy link do pliku,
-              np. href="/downloads/umux-ubuntu-latest.deb" (plik wrzuć do folderu public/downloads/). */}
+          {/* Download — prawdziwe releasy z GitHuba (link zawsze prowadzi do najnowszej wersji) */}
           <div className={cn(
             "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
             "rounded-xl p-8 mb-12",
@@ -63,27 +65,65 @@ export function Umux() {
               "bg-gradient-to-r from-indigo-400 to-purple-400",
               "bg-clip-text text-transparent"
             )}>
-              Download for Ubuntu
+              Download umux
             </h2>
             <p className="text-indigo-300 mb-6 max-w-2xl mx-auto">
-              umux is still in development. The official Ubuntu build will be available to download right here the moment it&apos;s ready.
+              v1.0 is out — free and open-source, no sign-up. Grab the latest release for your system from GitHub Releases.
             </p>
-            <button
-              type="button"
-              disabled
-              className={cn(
-                "inline-flex items-center gap-2",
-                "px-8 py-3 rounded-lg",
-                "bg-gray-700 text-gray-400 font-medium text-lg",
-                "cursor-not-allowed",
-                "border border-gray-600"
-              )}
-            >
-              <Download className="h-5 w-5" />
-              Coming soon
-            </button>
-            <p className="text-indigo-400/70 text-sm mt-4">
-              Want to follow progress? Check the repository below.
+            <div className="flex flex-col sm:flex-row justify-center gap-3 mb-6">
+              <a
+                href="https://github.com/CrystalPlatforms/umux/releases/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  "inline-flex items-center justify-center gap-2",
+                  "px-6 py-3 rounded-lg",
+                  "bg-gradient-to-r from-indigo-600 to-purple-600",
+                  "text-white font-medium text-lg",
+                  "hover:from-indigo-500 hover:to-purple-500",
+                  "transition-all duration-300",
+                  "shadow-lg shadow-indigo-500/20",
+                  "hover:shadow-xl hover:shadow-indigo-500/30"
+                )}
+              >
+                <Download className="h-5 w-5" />
+                Linux (.deb / .AppImage / .rpm)
+              </a>
+              <a
+                href="https://github.com/CrystalPlatforms/umux/releases/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  "inline-flex items-center justify-center gap-2",
+                  "px-6 py-3 rounded-lg",
+                  "border border-indigo-500/50 bg-indigo-900/30",
+                  "text-indigo-200 font-medium text-lg",
+                  "hover:bg-indigo-800/50",
+                  "transition-all duration-300"
+                )}
+              >
+                <Apple className="h-5 w-5" />
+                macOS (.dmg)
+              </a>
+              <a
+                href="https://github.com/CrystalPlatforms/umux/releases/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  "inline-flex items-center justify-center gap-2",
+                  "px-6 py-3 rounded-lg",
+                  "border border-indigo-500/50 bg-indigo-900/30",
+                  "text-indigo-200 font-medium text-lg",
+                  "hover:bg-indigo-800/50",
+                  "transition-all duration-300"
+                )}
+              >
+                <AppWindow className="h-5 w-5" />
+                Windows (.exe)
+              </a>
+            </div>
+            <p className="text-indigo-400/70 text-sm">
+              Builds are unsigned — macOS may ask you to right-click → Open on first launch, and Windows SmartScreen may show a one-time warning. This is normal for open-source apps.
             </p>
           </div>
 
@@ -145,7 +185,7 @@ export function Umux() {
                   </div>
                   <h3 className="text-xl font-bold text-indigo-200">Project Workspaces</h3>
                 </div>
-                <p className="text-indigo-300 text-sm">Group terminals into named, persistent workspaces — one per project. Switch context without losing your shells, and your setup survives restarts.</p>
+                <p className="text-indigo-300 text-sm">Group terminals into named workspaces — one per project. Create, rename, pin and reorder them, switch context without losing your shells, and everything persists across restarts.</p>
               </div>
               <div className={cn(
                 "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
@@ -157,9 +197,9 @@ export function Umux() {
                   <div className="p-2 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600">
                     <Columns className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-indigo-200">Split Panels</h3>
+                  <h3 className="text-xl font-bold text-indigo-200">Tabs &amp; Split Panels</h3>
                 </div>
-                <p className="text-indigo-300 text-sm">Split a workspace into up to two resizable panels. Keep a build, a log tail, and a server side by side without a cluttered window list.</p>
+                <p className="text-indigo-300 text-sm">Tabs per workspace with resizable split panels — keep a build, a log tail, and a server side by side. Pane zoom expands one panel fullscreen and restores the prior layout when you zoom back out.</p>
               </div>
               <div className={cn(
                 "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
@@ -173,7 +213,21 @@ export function Umux() {
                   </div>
                   <h3 className="text-xl font-bold text-indigo-200">AI CLI Notifications</h3>
                 </div>
-                <p className="text-indigo-300 text-sm">umux watches the terminal stream for completion signals from AI tools (like Claude Code) and fires a native desktop notification when a long task finishes — step away without babysitting.</p>
+                <p className="text-indigo-300 text-sm">When AI tools like Claude Code, Codex, Gemini CLI or Aider signal task completion, umux fires a native desktop notification — step away without babysitting long tasks.</p>
+              </div>
+              <div className={cn(
+                "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
+                "rounded-xl p-6",
+                "border border-indigo-500/30",
+                "shadow-lg shadow-indigo-500/20"
+              )}>
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600">
+                    <Activity className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-indigo-200">Agent Status</h3>
+                </div>
+                <p className="text-indigo-300 text-sm">A live indicator on every panel shows whether your AI agent is working, needs your attention, or is idle — see what&apos;s going on at a glance.</p>
               </div>
               <div className={cn(
                 "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
@@ -187,7 +241,21 @@ export function Umux() {
                   </div>
                   <h3 className="text-xl font-bold text-indigo-200">SSH Panels</h3>
                 </div>
-                <p className="text-indigo-300 text-sm">Open a panel connected to a remote machine over SSH using your local agent and keys. Remote panels behave just like local ones.</p>
+                <p className="text-indigo-300 text-sm">Open a panel connected to a remote machine over SSH using your local agent and keys (Linux &amp; macOS, Windows coming in v2.0). Remote panels behave just like local ones.</p>
+              </div>
+              <div className={cn(
+                "bg-gradient-to-b from-indigo-900/50 to-purple-900/50",
+                "rounded-xl p-6",
+                "border border-indigo-500/30",
+                "shadow-lg shadow-indigo-500/20"
+              )}>
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-indigo-600 to-purple-600">
+                    <History className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-indigo-200">Session Restore</h3>
+                </div>
+                <p className="text-indigo-300 text-sm">Close the app, come back tomorrow — umux reopens your workspaces, panels, layout, working directories and shells exactly where you left off.</p>
               </div>
             </div>
           </div>
@@ -224,8 +292,8 @@ export function Umux() {
               <div className="flex items-start space-x-3">
                 <Boxes className="h-5 w-5 text-indigo-400 mt-0.5" />
                 <div>
-                  <p className="text-indigo-200 font-medium">Ubuntu (Wayland)</p>
-                  <p className="text-indigo-300 text-sm">Designed and tested for Ubuntu on Wayland.</p>
+                  <p className="text-indigo-200 font-medium">Linux, macOS &amp; Windows</p>
+                  <p className="text-indigo-300 text-sm">One app for every OS — Linux (Ubuntu/Wayland, .deb/.AppImage/.rpm), macOS 11+ (universal .dmg), Windows 10+ (.exe).</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
